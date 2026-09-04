@@ -74,6 +74,687 @@
  .progress-grid{grid-template-columns:repeat(4,1fr);padding:18px 22px 25px}.progress-step{padding:74px 18px 18px;border-bottom:0;border-right:1px solid rgba(255,255,255,.12)}.progress-step:last-child{border-right:0}.progress-step .count{left:18px;top:22px}
  .mobile-sticky{display:none}.reference-footer{padding-bottom:28px}.eval-photo img{aspect-ratio:4/5}
 }
+  .gdcompare-section {
+    --navy: #12344d;
+    --deep: #071e31;
+    --blue: #0c85b8;
+    --cyan: #2aa9cf;
+    --ice: #eaf6fb;
+    --pale: #f7fbfd;
+    --white: #ffffff;
+    --ink: #183247;
+    --muted: #607582;
+    --line: #cfe2ea;
+    --green: #3f907a;
+    --amber: #d5922f;
+    --red: #be584f;
+
+    padding: 72px 0;
+    background:
+      radial-gradient(
+        circle at 92% 8%,
+        rgba(42, 169, 207, 0.09),
+        transparent 27%
+      ),
+      var(--ice);
+
+    font-family:
+      Inter,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Arial,
+      sans-serif;
+  }
+
+  .gdcompare-container {
+    width: min(calc(100% - 36px), 1160px);
+    margin: 0 auto;
+  }
+
+  .gdcompare-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 13px;
+
+    color: var(--blue);
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  .gdcompare-eyebrow::before {
+    content: "";
+
+    width: 27px;
+    height: 3px;
+
+    border-radius: 3px;
+
+    background: var(--cyan);
+  }
+
+  .gdcompare-title {
+    max-width: 850px;
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: clamp(32px, 7vw, 47px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+  }
+
+  .gdcompare-intro {
+    max-width: 790px;
+
+    margin: 15px 0 0;
+
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+
+  /* ================================
+     COMPARISON
+  ================================= */
+
+  .gdcompare-table {
+    margin-top: 34px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--line);
+    border-radius: 22px;
+
+    background: var(--white);
+
+    box-shadow:
+      0 20px 55px rgba(18, 52, 77, 0.09);
+  }
+
+  .gdcompare-table-head {
+    display: none;
+  }
+
+  .gdcompare-row {
+    padding: 21px;
+
+    border-bottom: 1px solid var(--line);
+  }
+
+  .gdcompare-row:last-child {
+    border-bottom: 0;
+  }
+
+  .gdcompare-topic {
+    margin-bottom: 15px;
+
+    color: var(--navy);
+
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  .gdcompare-values {
+    display: grid;
+    gap: 10px;
+  }
+
+  .gdcompare-value {
+    padding: 16px;
+
+    border-radius: 14px;
+
+    background: var(--pale);
+
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.58;
+  }
+
+  .gdcompare-value::before {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .gdcompare-value.gingivitis::before {
+    content: "Gingivitis";
+    color: var(--amber);
+  }
+
+  .gdcompare-value.periodontitis::before {
+    content: "Periodontitis";
+    color: var(--red);
+  }
+
+
+  /* ================================
+     INFOGRAPHIC
+  ================================= */
+
+  .gdcompare-visual-block {
+    margin-top: 52px;
+  }
+
+  .gdcompare-subhead {
+    max-width: 780px;
+  }
+
+  .gdcompare-subhead span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .gdcompare-subhead h3 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: clamp(26px, 5vw, 35px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+  }
+
+  .gdcompare-subhead p {
+    margin: 10px 0 0;
+
+    color: var(--muted);
+
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .gdcompare-infographic {
+    margin-top: 24px;
+
+    min-height: 240px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border: 1px solid var(--line);
+    border-radius: 22px;
+
+    background:
+      radial-gradient(
+        circle at 50% 10%,
+        rgba(42, 169, 207, 0.1),
+        transparent 34%
+      ),
+      #ffffff;
+
+    box-shadow:
+      0 18px 50px rgba(18, 52, 77, 0.08);
+  }
+
+  .gdcompare-infographic img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+  }
+
+  .gdcompare-infographic-alt {
+    max-width: 520px;
+
+    padding: 45px 28px;
+
+    color: #69808c;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.55;
+    text-align: center;
+  }
+
+
+  /* ================================
+     STAGE FLOW
+  ================================= */
+
+  .gdcompare-flow-wrap {
+    margin-top: 52px;
+  }
+
+  .gdcompare-flow-heading {
+    max-width: 760px;
+  }
+
+  .gdcompare-flow-heading span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .gdcompare-flow-heading h3 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: clamp(27px, 5vw, 36px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+  }
+
+  .gdcompare-flow-heading p {
+    margin: 10px 0 0;
+
+    color: var(--muted);
+
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .gdcompare-flow-card {
+    margin-top: 25px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(18, 52, 77, 0.09);
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    box-shadow:
+      0 22px 60px rgba(18, 52, 77, 0.1);
+  }
+
+  .gdcompare-progress {
+    display: grid;
+    gap: 13px;
+
+    padding: 24px;
+
+    background:
+      linear-gradient(
+        135deg,
+        #f8fcfd,
+        #eef8fb
+      );
+  }
+
+  .gdcompare-stage {
+    padding: 20px;
+
+    border: 1px solid var(--line);
+    border-radius: 17px;
+
+    background: #ffffff;
+  }
+
+  .gdcompare-stage-number {
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .gdcompare-stage:nth-of-type(1) .gdcompare-stage-number {
+    background: var(--green);
+  }
+
+  .gdcompare-stage:nth-of-type(3) .gdcompare-stage-number {
+    background: var(--amber);
+  }
+
+  .gdcompare-stage:nth-of-type(5) .gdcompare-stage-number {
+    background: var(--red);
+  }
+
+  .gdcompare-stage-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .gdcompare-stage h4 {
+    margin: 0 0 7px;
+
+    color: var(--navy);
+
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  .gdcompare-stage p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 15px;
+    line-height: 1.58;
+  }
+
+  .gdcompare-arrow {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    margin: -2px auto;
+
+    border-radius: 50%;
+
+    background: #dcedf4;
+    color: var(--blue);
+
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+
+  /* ================================
+     WHY STAGE MATTERS
+  ================================= */
+
+  .gdcompare-why {
+    padding: 27px 24px;
+
+    background:
+      linear-gradient(
+        135deg,
+        var(--navy),
+        var(--deep)
+      );
+
+    color: #ffffff;
+  }
+
+  .gdcompare-why-intro span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #8ed9ed;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .gdcompare-why-intro h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.18;
+  }
+
+  .gdcompare-why-intro p {
+    margin: 9px 0 0;
+
+    color: #cce0e8;
+
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .gdcompare-facts {
+    display: grid;
+    gap: 10px;
+
+    margin-top: 21px;
+  }
+
+  .gdcompare-fact {
+    padding: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .gdcompare-fact-num {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 11px;
+
+    border-radius: 10px;
+
+    background: rgba(42, 169, 207, 0.18);
+    color: #a2e3f3;
+
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+  .gdcompare-fact strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  .gdcompare-fact p {
+    margin: 5px 0 0;
+
+    color: #c9dce5;
+
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .gdcompare-note {
+    padding: 15px 20px;
+
+    border-top: 1px solid var(--line);
+
+    background: #ffffff;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .gdcompare-note strong {
+    color: var(--navy);
+  }
+
+
+  /* ================================
+     TABLET
+  ================================= */
+
+  @media (min-width: 720px) {
+
+    .gdcompare-section {
+      padding: 84px 0;
+    }
+
+    .gdcompare-table-head {
+      display: grid;
+      grid-template-columns: 0.65fr 1fr 1fr;
+
+      background: var(--navy);
+
+      color: #ffffff;
+    }
+
+    .gdcompare-table-head div {
+      padding: 16px 20px;
+
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .gdcompare-table-head div:nth-child(2) {
+      color: #ffd08a;
+    }
+
+    .gdcompare-table-head div:nth-child(3) {
+      color: #ffaaa4;
+    }
+
+    .gdcompare-row {
+      display: grid;
+      grid-template-columns: 0.65fr 1fr 1fr;
+
+      gap: 0;
+
+      padding: 0;
+    }
+
+    .gdcompare-topic,
+    .gdcompare-value {
+      margin: 0;
+      padding: 19px 20px;
+
+      border-radius: 0;
+
+      background: transparent;
+    }
+
+    .gdcompare-topic {
+      display: flex;
+      align-items: center;
+
+      border-right: 1px solid var(--line);
+
+      font-size: 14px;
+    }
+
+    .gdcompare-values {
+      display: contents;
+    }
+
+    .gdcompare-value {
+      border-right: 1px solid var(--line);
+
+      font-size: 14px;
+    }
+
+    .gdcompare-value:last-child {
+      border-right: 0;
+    }
+
+    .gdcompare-value::before {
+      display: none;
+    }
+
+    .gdcompare-facts {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+
+  /* ================================
+     DESKTOP
+  ================================= */
+
+  @media (min-width: 960px) {
+
+    .gdcompare-progress {
+      grid-template-columns:
+        1fr
+        42px
+        1fr
+        42px
+        1fr;
+
+      align-items: stretch;
+
+      padding: 32px;
+    }
+
+    .gdcompare-stage {
+      min-height: 235px;
+
+      padding: 24px;
+    }
+
+    .gdcompare-arrow {
+      align-self: center;
+
+      margin: 0;
+
+      transform: rotate(-90deg);
+    }
+
+    .gdcompare-why {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+
+      gap: 36px;
+      align-items: center;
+
+      padding: 34px;
+    }
+
+    .gdcompare-facts {
+      margin-top: 0;
+    }
+
+    .gdcompare-infographic {
+      min-height: 360px;
+    }
+  }
+
   .gd-stages-section {
     --gd-navy: #12344d;
     --gd-blue: #0c85b8;
@@ -580,252 +1261,402 @@ later be replaced with a branded infographic without changing the page flow.
  </div>
 </section>
 
-<section class="gd-stages-section">
 
-    <div class="gd-stages-container">
+<section class="gdcompare-section">
 
-        <!-- Heading -->
+  <div class="gdcompare-container">
 
-        <div class="gd-stages-eyebrow">
-            Early vs. Advanced Periodontal Disease
+
+    <div class="gdcompare-eyebrow">
+      Early vs. Advanced Periodontal Disease
+    </div>
+
+    <h2 class="gdcompare-title">
+      Gingivitis vs. Periodontitis:
+      What's the Difference?
+    </h2>
+
+    <p class="gdcompare-intro">
+      Gingivitis and periodontitis are related forms of gum disease,
+      but they affect the tissues supporting your teeth differently.
+      Understanding the difference helps explain why the stage matters.
+    </p>
+
+
+    <!-- COMPARISON -->
+
+    <div class="gdcompare-table">
+
+      <div class="gdcompare-table-head">
+        <div>Compare</div>
+        <div>Gingivitis</div>
+        <div>Periodontitis</div>
+      </div>
+
+
+      <div class="gdcompare-row">
+
+        <div class="gdcompare-topic">
+          What you may notice
         </div>
 
-        <h2 class="gd-stages-heading">
-            Gingivitis vs. Periodontitis:
-            What's the Difference?
-        </h2>
-
-        <p class="gd-stages-intro">
-            Gingivitis and periodontitis are related forms of gum disease,
-            but they affect the tissues around your teeth differently—and
-            the stage can change what type of care may be recommended.
-        </p>
-
-
-        <div class="gd-stages-card">
-
-            <!-- =========================================
-           TOP: STAGE PROGRESSION
-      ========================================== -->
-
-            <div class="gd-stage-progress">
-
-
-                <!-- Stage 1 -->
-
-                <article class="gd-stage-item">
-
-                    <div class="gd-stage-number">
-                        01
-                    </div>
-
-                    <div>
-
-                        <span class="gd-stage-label">
-                            Baseline
-                        </span>
-
-                        <h3 class="gd-stage-title">
-                            Healthy Gums
-                        </h3>
-
-                        <p class="gd-stage-text">
-                            Healthy gum tissue is generally firm, with no ongoing
-                            bleeding, swelling or signs that the supporting tissues
-                            around the teeth are being lost.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <div class="gd-stage-arrow" aria-hidden="true">
-                    ↓
-                </div>
-
-
-                <!-- Stage 2 -->
-
-                <article class="gd-stage-item">
-
-                    <div class="gd-stage-number">
-                        02
-                    </div>
-
-                    <div>
-
-                        <span class="gd-stage-label">
-                            Early Gum Disease
-                        </span>
-
-                        <h3 class="gd-stage-title">
-                            Gingivitis
-                        </h3>
-
-                        <p class="gd-stage-text">
-                            Inflammation mainly affects the gums and may cause
-                            bleeding, redness, tenderness or swelling—often without
-                            significant pain.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <div class="gd-stage-arrow" aria-hidden="true">
-                    ↓
-                </div>
-
-
-                <!-- Stage 3 -->
-
-                <article class="gd-stage-item">
-
-                    <div class="gd-stage-number">
-                        03
-                    </div>
-
-                    <div>
-
-                        <span class="gd-stage-label">
-                            Deeper Periodontal Disease
-                        </span>
-
-                        <h3 class="gd-stage-title">
-                            Periodontitis
-                        </h3>
-
-                        <p class="gd-stage-text">
-                            The inflammation has affected deeper tissues supporting
-                            the teeth. Gum recession, deeper pockets, bone loss or
-                            tooth mobility may develop.
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-
-            <!-- =========================================
-           BOTTOM: WHY STAGE MATTERS
-      ========================================== -->
-
-            <div class="gd-stage-explanation">
-
-                <div class="gd-stage-explanation-top">
-
-                    <span class="gd-stage-explanation-kicker">
-                        Why the distinction matters
-                    </span>
-
-                    <h3>
-                        The Stage Helps Guide the Next Step
-                    </h3>
-
-                    <p>
-                        Symptoms alone cannot tell you how advanced gum disease
-                        may be. A periodontal evaluation helps determine what is
-                        happening around the teeth and supporting tissues.
-                    </p>
-
-                </div>
-
-
-                <div class="gd-stage-facts">
-
-
-                    <div class="gd-stage-fact">
-
-                        <div class="gd-stage-fact-icon">
-                            01
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                Gingivitis can often improve
-                            </strong>
-
-                            <p>
-                                Early inflammation can often improve when plaque and
-                                tartar are professionally managed and daily home care
-                                improves.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="gd-stage-fact">
-
-                        <div class="gd-stage-fact-icon">
-                            02
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                Periodontitis affects deeper support
-                            </strong>
-
-                            <p>
-                                Lost supporting tissue does not simply return with
-                                brushing, but periodontal treatment can help manage
-                                the disease and protect remaining support.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="gd-stage-fact">
-
-                        <div class="gd-stage-fact-icon">
-                            03
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                Progression varies by patient
-                            </strong>
-
-                            <p>
-                                Smoking, diabetes, plaque control, genetics and other
-                                individual factors can influence periodontal risk and
-                                progression.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-
-            <!-- Bottom clarification -->
-
-            <div class="gd-stage-note">
-
-                <strong>Important:</strong>
-                This diagram explains the difference between stages; it does
-                not mean every patient automatically progresses from
-                gingivitis to periodontitis.
-
-            </div>
+        <div class="gdcompare-values">
+
+          <div class="gdcompare-value gingivitis">
+            Red, swollen or tender gums with bleeding during brushing
+            or flossing.
+          </div>
+
+          <div class="gdcompare-value periodontitis">
+            Gum recession, deeper pockets, persistent bleeding,
+            loose or shifting teeth, and possible chewing discomfort.
+          </div>
 
         </div>
+
+      </div>
+
+
+      <div class="gdcompare-row">
+
+        <div class="gdcompare-topic">
+          What's happening underneath
+        </div>
+
+        <div class="gdcompare-values">
+
+          <div class="gdcompare-value gingivitis">
+            Inflammation is mainly affecting the gum tissue around
+            the teeth.
+          </div>
+
+          <div class="gdcompare-value periodontitis">
+            Deeper tissues supporting the teeth, including bone,
+            may become affected.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="gdcompare-row">
+
+        <div class="gdcompare-topic">
+          Bone involvement
+        </div>
+
+        <div class="gdcompare-values">
+
+          <div class="gdcompare-value gingivitis">
+            Gingivitis itself does not involve periodontal bone loss.
+          </div>
+
+          <div class="gdcompare-value periodontitis">
+            Supporting bone may be lost as periodontitis progresses.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="gdcompare-row">
+
+        <div class="gdcompare-topic">
+          Can it improve?
+        </div>
+
+        <div class="gdcompare-values">
+
+          <div class="gdcompare-value gingivitis">
+            Early gingivitis can often improve with professional care
+            and consistent daily plaque control.
+          </div>
+
+          <div class="gdcompare-value periodontitis">
+            Lost support does not simply grow back, but treatment can
+            help manage disease and protect remaining tissues.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="gdcompare-row">
+
+        <div class="gdcompare-topic">
+          Possible care
+        </div>
+
+        <div class="gdcompare-values">
+
+          <div class="gdcompare-value gingivitis">
+            Professional cleaning together with improved brushing and
+            interdental cleaning may be recommended.
+          </div>
+
+          <div class="gdcompare-value periodontitis">
+            Treatment depends on severity and may involve deeper
+            cleaning, periodontal maintenance or additional therapy.
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
+
+
+
+    <!-- INFOGRAPHIC -->
+
+    <div class="gdcompare-visual-block">
+
+      <div class="gdcompare-subhead">
+
+        <span>
+          See the Difference
+        </span>
+
+        <h3>
+          What Does the Difference Look Like Around a Tooth?
+        </h3>
+
+        <p>
+          The visible gumline is only part of the picture. The pocket
+          around the tooth and the supporting bone underneath are also
+          important when evaluating periodontal health.
+        </p>
+
+      </div>
+
+
+      <div
+        class="gdcompare-infographic"
+        data-image-url="./assets/Gum_Disease_Progression_Comparison.png"
+        data-alt="Healthy gums vs. gingivitis vs. periodontitis infographic showing changes in the gumline, periodontal pocket and supporting bone."
+      ></div>
+
+    </div>
+
+
+
+    <!-- STAGE FLOW -->
+
+    <div class="gdcompare-flow-wrap">
+
+      <div class="gdcompare-flow-heading">
+
+        <span>
+          From Early Inflammation to Deeper Involvement
+        </span>
+
+        <h3>
+          How the Stages Change — and Why It Matters
+        </h3>
+
+        <p>
+          These stages help explain how gum inflammation differs from
+          deeper periodontal disease. They do not mean every patient
+          will automatically progress through each stage.
+        </p>
+
+      </div>
+
+
+      <div class="gdcompare-flow-card">
+
+
+        <div class="gdcompare-progress">
+
+
+          <article class="gdcompare-stage">
+
+            <div class="gdcompare-stage-number">
+              01
+            </div>
+
+            <span class="gdcompare-stage-label">
+              Baseline
+            </span>
+
+            <h4>
+              Healthy Gums
+            </h4>
+
+            <p>
+              Healthy gum tissue is generally firm, without ongoing
+              bleeding, swelling or loss of tooth support.
+            </p>
+
+          </article>
+
+
+          <div class="gdcompare-arrow">
+            ↓
+          </div>
+
+
+          <article class="gdcompare-stage">
+
+            <div class="gdcompare-stage-number">
+              02
+            </div>
+
+            <span class="gdcompare-stage-label">
+              Early Gum Disease
+            </span>
+
+            <h4>
+              Gingivitis
+            </h4>
+
+            <p>
+              Inflammation mainly affects the gums and may cause
+              redness, tenderness, swelling or bleeding.
+            </p>
+
+          </article>
+
+
+          <div class="gdcompare-arrow">
+            ↓
+          </div>
+
+
+          <article class="gdcompare-stage">
+
+            <div class="gdcompare-stage-number">
+              03
+            </div>
+
+            <span class="gdcompare-stage-label">
+              Deeper Periodontal Disease
+            </span>
+
+            <h4>
+              Periodontitis
+            </h4>
+
+            <p>
+              Deeper supporting tissues and bone may be affected,
+              potentially leading to recession, pockets or tooth
+              mobility.
+            </p>
+
+          </article>
+
+
+        </div>
+
+
+
+        <!-- WHY IT MATTERS -->
+
+        <div class="gdcompare-why">
+
+
+          <div class="gdcompare-why-intro">
+
+            <span>
+              Why the distinction matters
+            </span>
+
+            <h3>
+              The Stage Helps Guide the Next Step
+            </h3>
+
+            <p>
+              Symptoms alone cannot show how advanced periodontal
+              disease may be. A dental evaluation helps determine what
+              is happening around the teeth and supporting tissues.
+            </p>
+
+          </div>
+
+
+          <div class="gdcompare-facts">
+
+
+            <div class="gdcompare-fact">
+
+              <div class="gdcompare-fact-num">
+                01
+              </div>
+
+              <strong>
+                Gingivitis can often improve
+              </strong>
+
+              <p>
+                Early inflammation can often improve when plaque and
+                tartar are professionally managed and daily home care
+                improves.
+              </p>
+
+            </div>
+
+
+            <div class="gdcompare-fact">
+
+              <div class="gdcompare-fact-num">
+                02
+              </div>
+
+              <strong>
+                Periodontitis affects deeper support
+              </strong>
+
+              <p>
+                Lost supporting tissue does not simply return with
+                brushing, but treatment can help manage disease and
+                protect remaining support.
+              </p>
+
+            </div>
+
+
+            <div class="gdcompare-fact">
+
+              <div class="gdcompare-fact-num">
+                03
+              </div>
+
+              <strong>
+                Progression varies by patient
+              </strong>
+
+              <p>
+                Smoking, diabetes, plaque control, genetics and other
+                individual factors can influence periodontal risk.
+              </p>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+        <div class="gdcompare-note">
+
+          <strong>Important:</strong>
+          Not every patient with gingivitis will automatically progress
+          to periodontitis. A dental examination is needed to understand
+          your actual periodontal condition.
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+  </div>
 
 </section>
 
@@ -929,4 +1760,34 @@ later be replaced with a branded infographic without changing the page flow.
 
 <div class="mobile-sticky"><a class="call" href="tel:+12127595595">Call Office</a><a class="book" href="https://www.dddentalnyc.com/contact-us/">Have My Gums Checked</a></div>
 </body>
+ 
+<script>
+  document.querySelectorAll(".gdcompare-infographic").forEach(function (box) {
+
+    const imageUrl = (box.dataset.imageUrl || "").trim();
+    const altText = box.dataset.alt || "";
+
+    if (imageUrl) {
+
+      const img = document.createElement("img");
+
+      img.src = imageUrl;
+      img.alt = altText;
+      img.loading = "lazy";
+
+      box.appendChild(img);
+
+    } else {
+
+      const alt = document.createElement("span");
+
+      alt.className = "gdcompare-infographic-alt";
+      alt.textContent = altText;
+
+      box.appendChild(alt);
+
+    }
+
+  });
+</script>
 </html>
